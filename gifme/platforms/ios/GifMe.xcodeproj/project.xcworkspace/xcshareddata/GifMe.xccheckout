@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BA2DCD9F-99ED-4476-9EB3-05DF4875D6DD</string>
+	<string>57BC57DE-9773-41A0-AE9F-CC6B383A4136</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GifMe</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/DrewDahlman/GifMeApps.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ios/gifme/platforms/ios/GifMe.xcodeproj/project.xcworkspace</string>
+	<string>gifme/platforms/ios/GifMe.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0FFAF987-F53F-47D0-A36B-7D307F4F700B</key>
-		<string>../../../../../..</string>
+		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/DrewDahlman/GifMeApps.git</string>
