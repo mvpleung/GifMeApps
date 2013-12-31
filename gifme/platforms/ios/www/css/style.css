@@ -91,7 +91,7 @@ h1, .stat {
   background-color: white;
   border-bottom: 1px solid #d82153;
   position: relative;
-  margin-top: 40px; }
+  margin-top: 25px; }
   .default header #logo {
     position: absolute;
     left: 0px;
@@ -350,7 +350,9 @@ a {
   background-color: white;
   z-index: 500;
   padding-top: 22px;
-  text-align: left; }
+  text-align: left;
+  -webkit-user-select: none;
+  -webkit-transform: translateZ(0); }
   #tag_edit .gif_holder, #settings_edit .gif_holder, #info_edit .gif_holder {
     width: 100%;
     height: 297px;
@@ -502,6 +504,12 @@ a {
         left: 0px;
         font-family: "icomoon";
         margin-right: 10px; }
+
+.android header {
+  margin-top: 0px !important; }
+.android #tag_edit, .android #settings_edit, .android #info_edit {
+  padding-top: 0px !important;
+  box-shadow: none !important; }
 
 #signin, #signup {
   display: none; }

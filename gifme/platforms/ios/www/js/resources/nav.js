@@ -62,6 +62,8 @@
 			// SEARCH
 			self.search_box.bind('touchend', function() {
 				self.search_box.width('205px');
+				$("#search").val('');
+
 				setTimeout(function() {
 					self.search.fadeIn(250);
 					self.search.focus();
@@ -72,9 +74,11 @@
 				self.search.fadeOut(150);
 				setTimeout(function() {
 					self.search_box.width('37px');
-				}, 250);
-				$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
 
+					if (!$("body").hasClass('android')) {
+						$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
+					}
+				}, 250);
 
 			});
 
@@ -107,7 +111,10 @@
 						_gifme.new_data(data);
 					});
 				}
-				$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
+				$("#search").val('');
+				// $("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
+				$("#search").blur();
+
 				return false;
 			});
 
@@ -120,8 +127,20 @@
 
 				});
 			});
+
 			self.upload.bind('touchend', function() {
 				_gifme.set_view(_gifme.templates.upload, null, function() {
+
+					$("#upload_url").focus(function(event) {
+						event.preventDefault();
+						$(this).blur();
+						
+						cordova.plugins.clipboard.paste(function(text) {
+							$("#upload_url").val(text);
+							// alert(text)
+						});
+					})
+
 					$("#upload_button").bind('touchend', function() {
 						var url = $("#upload_url").val();
 						url = url.replace("http://", "");
@@ -129,24 +148,25 @@
 
 						var u = localStorage.getItem('uuid');
 
-						console.log(u, url)
 						if (url != "") {
-							$("#modal").html("<b>uploading...<b><br/><span class='icon'>$</span>");
-							$("#modal").show();
-							$.ajax({
-								url: "http://166.78.184.106/gif/create/" + u + "/" + url,
-								type: "GET",
-								success: function(msg) {
-									$("#modal").html("<b>DONE!<b><br/><span class='icon'>$</span>");
-									setTimeout(function() {
-										$("#modal").fadeOut();
-										window.location.reload();
-									}, 1500);
-								},
-								error: function(w, t, f) {
-									console.log(w, t, f);
-								}
-							});
+							if (url.indexOf('.gif') > 0 || url.indexOf('.jpg') > 0 || url.indexOf('.GIF') > 0) {
+								$("#modal").html("<b>uploading...<b><br/><span class='icon'>$</span>");
+								$("#modal").show();
+								$.ajax({
+									url: "http://166.78.184.106/gif/create/" + u + "/" + url,
+									type: "GET",
+									success: function(msg) {
+										$("#modal").html("<b>DONE!<b><br/><span class='icon'>$</span>");
+										setTimeout(function() {
+											$("#modal").fadeOut();
+											window.location.reload();
+										}, 1500);
+									},
+									error: function(w, t, f) {
+										console.log(w, t, f);
+									}
+								});
+							}
 						}
 					});
 				});

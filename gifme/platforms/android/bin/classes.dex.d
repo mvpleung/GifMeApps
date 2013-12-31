@@ -1,0 +1,23 @@
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes.dex : \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/com/verso/cordova/clipboard/Clipboard.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/io/gifme/gifme/BuildConfig.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/io/gifme/gifme/GifMe.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/io/gifme/gifme/R$attr.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/io/gifme/gifme/R$drawable.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/io/gifme/gifme/R$string.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/io/gifme/gifme/R$xml.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/io/gifme/gifme/R.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$5.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
+/Applications/MAMP/htdocs/GifMeApps/gifme/platforms/android/bin/dexedLibs/classes-e1b7558626af3e598a5da6036b2c3c0e.jar \

@@ -58,7 +58,7 @@ h1,.stat
 			bottom: 1px solid $pink
 		position: relative
 		margin:
-			top: 40px
+			top: 25px
 
 		#logo
 			position: absolute
@@ -384,6 +384,9 @@ a
 #tag_edit
 	box-shadow: 0px 0px 5px 5px rgba(0,0,0,.5)
 
+
+
+
 #tag_edit,#settings_edit,#info_edit
 	height: 100%
 	width: 100%
@@ -395,6 +398,8 @@ a
 	padding:
 		top: 22px
 	text-align: left
+	-webkit-user-select: none
+	-webkit-transform: translateZ(0)
 
 	.gif_holder
 		width: 100%
@@ -592,3 +597,13 @@ a
 					family: $icon
 				margin:
 					right: 10px
+
+.android
+	header
+		margin:
+			top: 0px !important
+
+	#tag_edit,#settings_edit,#info_edit
+		padding:
+			top: 0px !important
+		box-shadow: none !important

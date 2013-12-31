@@ -37,6 +37,12 @@
 			//	Start Things Off
 			//
 			/////////////////////////////////////////
+			if (navigator.userAgent.toLowerCase().match(/android/i)) {
+				$("header").css({
+					'margin-top': '0px'
+				})
+				$("body").addClass('android');
+			}
 			if (self.user) {
 				self.content.css({
 					'width': '100%'
@@ -52,12 +58,12 @@
 					}, 1500)
 				});
 
-				if (localStorage.getItem('v') != "0.0.6") {
+				if (localStorage.getItem('v') != "0.0.8") {
 					$("#overlay_update").show();
 					$("#close_button").click(function() {
 						$("#overlay_update").remove();
 					});
-					localStorage.setItem('v', '0.0.6');
+					localStorage.setItem('v', '0.0.8');
 				} else {
 					$("#overlay_update").remove();
 				}
@@ -77,8 +83,9 @@
 				var url = $(this).attr('href');
 				window.open(url, '_system');
 			});
-			$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
-
+			if (!$("body").hasClass('android')) {
+				$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
+			}
 			callback();
 		}
 
@@ -115,7 +122,7 @@
 						cordova.plugins.clipboard.copy(text);
 						$("#modal").html("Copied!");
 						$("#modal").show();
-						
+
 						setTimeout(function() {
 							$("#modal").fadeOut();
 						}, 500);

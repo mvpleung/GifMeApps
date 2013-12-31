@@ -63,7 +63,10 @@
 				} // End Callback
 			);
 
-			if (window.innerHeight == 480) {
+			if (window.innerHeight <= 480) {
+				$(".gif_holder").height(210)
+			}
+			if (navigator.userAgent.toLowerCase().match(/android/i)) {
 				$(".gif_holder").height(210)
 			}
 			$(".gif_holder").imgur({
