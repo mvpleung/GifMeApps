@@ -41,34 +41,31 @@
 			/////////////////////////////////////////
 
 			// LOGO
-			self.logo.click(function() {
+			self.logo.bind('touchend', function() {
 				_gifme.api.get("/userbeta/" + _gifme.user + "/gifs/0", function(data) {
 					$("#wrapper").scrollTop(0);
 					_gifme.page = 0;
 					_gifme.content.html('');
 					_gifme.new_data(data);
 				});
-				_gaq.push(['_trackEvent', 'logo', 'clicked']);
 			});
 
-			self.go_to.click(function() {
+			self.go_to.bind('touchend', function() {
 				_gifme.api.get("/user/" + _gifme.user + "/favorites", function(data) {
 					$("#wrapper").scrollTop(0);
 					_gifme.page = 0;
 					_gifme.content.html('');
 					_gifme.new_data(data);
 				});
-				_gaq.push(['_trackEvent', 'goto', 'clicked']);
 			});
 
 			// SEARCH
-			self.search_box.click(function() {
+			self.search_box.bind('touchend', function() {
 				self.search_box.width('205px');
 				setTimeout(function() {
 					self.search.fadeIn(250);
 					self.search.focus();
 				}, 250)
-				_gaq.push(['_trackEvent', 'search_box', 'clicked']);
 			});
 
 			self.search.blur(function() {
@@ -76,19 +73,21 @@
 				setTimeout(function() {
 					self.search_box.width('37px');
 				}, 250);
+				$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
+
+
 			});
 
-			self.menu_box.click(function() {
+			self.menu_box.bind('touchend', function() {
 				$("body").toggleClass('menu_open');
 				if ($('body').hasClass('menu_open')) {
 					self.menu_box.children('.icon').html('x')
 				} else {
 					self.menu_box.children('.icon').html('/')
 				}
-				_gaq.push(['_trackEvent', 'menu_box', 'clicked']);
 			});
 
-			$('#wrapper,#search_box,#logo,.thumb,.item,#logo').not("#menu_box,#menu_box .icon").click(function() {
+			$('#wrapper,#search_box,#logo,.thumb,.item,#logo').not("#menu_box,#menu_box .icon").bind('touchend', function() {
 				$("body").removeClass('menu_open');
 				self.menu_box.children('.icon').html('/')
 			});
@@ -97,7 +96,6 @@
 				$("#wrapper").scrollTop(0);
 				_gifme.page = 0;
 				var term = $("#search").val();
-
 				if (term == "") {
 					_gifme.api.get("/userbeta/" + _gifme.user + "/gifs/" + _gifme.page, function(data) {
 						_gifme.content.html("");
@@ -109,20 +107,50 @@
 						_gifme.new_data(data);
 					});
 				}
-				_gaq.push(['_trackEvent', 'search?q='+term, 'clicked']);
+				$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
 				return false;
 			});
 
-			self.settings.click(function() {
+			self.settings.bind('touchend', function() {
 				_gifme.settings.init();
-				_gaq.push(['_trackEvent', 'settings', 'clicked']);
 			});
 
-			self.about.click(function() {
+			self.about.bind('touchend', function() {
 				_gifme.set_view(_gifme.templates.info, null, function() {
 
 				});
-				_gaq.push(['_trackEvent', 'about', 'clicked']);
+			});
+			self.upload.bind('touchend', function() {
+				_gifme.set_view(_gifme.templates.upload, null, function() {
+					$("#upload_button").bind('touchend', function() {
+						var url = $("#upload_url").val();
+						url = url.replace("http://", "");
+						url = url.replace("https://", "");
+
+						var u = localStorage.getItem('uuid');
+
+						console.log(u, url)
+						if (url != "") {
+							$("#modal").html("<b>uploading...<b><br/><span class='icon'>$</span>");
+							$("#modal").show();
+							$.ajax({
+								url: "http://166.78.184.106/gif/create/" + u + "/" + url,
+								type: "GET",
+								success: function(msg) {
+									$("#modal").html("<b>DONE!<b><br/><span class='icon'>$</span>");
+									setTimeout(function() {
+										$("#modal").fadeOut();
+										window.location.reload();
+									}, 1500);
+								},
+								error: function(w, t, f) {
+									console.log(w, t, f);
+								}
+							});
+						}
+					});
+				});
+				_gaq.push(['_trackEvent', 'upload', 'clicked']);
 			});
 		}
 

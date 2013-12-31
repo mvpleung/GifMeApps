@@ -32,10 +32,6 @@
 			self.settings = new settings();
 			self.content = $("#content");
 
-			$("html,body").height(window.innerHeight);
-			$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
-			console.log($("#wrapper").height())
-
 			/////////////////////////////////////////
 			//
 			//	Start Things Off
@@ -49,14 +45,19 @@
 				self.api.get("/userbeta/" + self.user + "/gifs/" + self.page, function(data) {
 					$("#wrapper").scrollTop(0);
 					self.new_data(data);
+
+					setTimeout(function() {
+						$("html,body").height(window.innerHeight);
+						$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
+					}, 1500)
 				});
 
-				if (localStorage.getItem('v') != "2.6.1") {
+				if (localStorage.getItem('v') != "0.0.6") {
 					$("#overlay_update").show();
 					$("#close_button").click(function() {
 						$("#overlay_update").remove();
 					});
-					localStorage.setItem('v', '2.6.1');
+					localStorage.setItem('v', '0.0.6');
 				} else {
 					$("#overlay_update").remove();
 				}
@@ -69,12 +70,15 @@
 		}
 
 		self.set_view = function(view, data, callback) {
+			$("input").blur();
 			self.content.html(view(data));
 			$("a").click(function(event) {
 				event.preventDefault();
 				var url = $(this).attr('href');
 				window.open(url, '_system');
 			});
+			$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
+
 			callback();
 		}
 
@@ -102,19 +106,36 @@
 					i = i + 50;
 				});
 
-				$(".box").bind('click', function() {
-					_gaq.push(['_trackEvent', 'edit_page', 'clicked']);
-					var gif = $(this).attr('id');
-					var tag = "";
-					var link = $(this).data('url');
 
-					self.api.get("/gif/" + gif + "/details", function(data) {
-						var detail = self.templates.tag_page(data);
-						$("body").prepend(detail);
+				$('.box').doubletap(
+					/** doubletap-dblclick callback */
+					function(el) {
+						var text = $(el).data('url');
 
-						var tagPage = new tag_page(data);
-					});
-				});
+						cordova.plugins.clipboard.copy(text);
+						$("#modal").html("Copied!");
+						$("#modal").show();
+						
+						setTimeout(function() {
+							$("#modal").fadeOut();
+						}, 500);
+
+					},
+					/** touch-click callback (touch) */
+					function(el) {
+						var gif = $(el).attr('id');
+						var tag = "";
+						var link = $(el).data('url');
+
+						self.api.get("/gif/" + gif + "/details", function(data) {
+							var detail = self.templates.tag_page(data);
+							$("body").prepend(detail);
+
+							var tagPage = new tag_page(data);
+						});
+					},
+					400
+				);
 
 				$("#content").append("<div class='clear' id='page_" + pageID + "' data-active='false' data-page='" + self.page + "'></div>");
 
@@ -137,8 +158,6 @@
 			} else {
 				_gifme.content.html("<div id='oh_no'>There's nothing here.<br/>Go collect more gifs!</div>")
 			}
-
-
 
 		}
 

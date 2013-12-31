@@ -16,14 +16,14 @@
 		self.init = function() {
 			$("#signin").show();
 
-			$("#account").click(function(event) {
+			$("#account").bind('touchend', function(event) {
 				event.preventDefault();
 
 				$("#signup").hide();
 				$("#signin").show();
 
 			});
-			$("#signup_button").click(function(event) {
+			$("#signup_button").bind('touchend', function(event) {
 				event.preventDefault();
 
 				$("#signup").show();
@@ -32,7 +32,7 @@
 			});
 
 			// sign up
-			$(".submit").click(function(event) {
+			$(".submit").bind('touchend', function(event) {
 				event.preventDefault();
 				var email = $("#signup .email").val();
 				var pass = $("#signup .pass").val();
@@ -50,16 +50,17 @@
 						localStorage.setItem('uuid', data.user.id);
 						_gifme.content.html("");
 						_gifme.content.width('100%');
-						_gifme.api.get("/user/" + data.user.id + "/gifs/" + self.page, function(data) {
-							_gifme.new_data(data);
-						});
+						// _gifme.api.get("/user/" + data.user.id + "/gifs/" + self.page, function(data) {
+						// 	_gifme.new_data(data);
+						// });
+						window.location.reload();
 					}
 
 				});
 			});
 
 			// sign in
-			$(".submit_b").click(function(event) {
+			$(".submit_b").bind('touchend', function(event) {
 				event.preventDefault();
 
 				var email = $("#signin .email").val();
@@ -80,11 +81,12 @@
 						localStorage.setItem('uuid', data);
 						_gifme.content.html("");
 						_gifme.content.width('100%');
-						_gifme.api.get("/userbeta/" + data + "/gifs/" + _gifme.page, function(data) {
-							_gifme.nav.init();
-							_gifme.content.width('100%');
-							_gifme.new_data(data);
-						});
+						// _gifme.api.get("/userbeta/" + data + "/gifs/" + _gifme.page, function(data) {
+						// 	// _gifme.nav.init();
+						// 	// _gifme.content.width('100%');
+						// 	// _gifme.new_data(data);
+						// });
+						window.location.reload();
 
 					}
 

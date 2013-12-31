@@ -1,22 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -30,7 +12,8 @@
         <script src='js/libs/jQuery.js'></script>
         <script src='js/libs/underscore.js'></script>
         <script src='js/libs/imgur.js'></script>
-        <script src='js/libs/ga.js'></script>
+        <script src='js/libs/doubletap.js'></script>
+        <script src='js/libs/direction.js'></script>
 
         <!-- RESOURCES -->
         <script src='js/resources/nav.js'></script>
@@ -47,10 +30,9 @@
     <body class='default'>
         <div id='overlay_update'>
             <h1>Thanks For Using GifMe!</h1>
-            <p>Hey there, a few quick notes on this update:</p>
-            <p>We've added the ability to 'auto tag' images you save! You can activate this in your settings, just check 'auto tag' and you will see a prompt after saving that asks for tags. this way you can more quickly tag and save images!</p>
-            <p>This feature was requested in the feedback forums, if you have a request please let us know!</p>
-            <p>If you have any feedback / bugs / comments let us know in the <a href='https://chrome.google.com/webstore/developer/support/aeblbmdigihnlnnmoejhagmpihfjdaab' target='_blank'>support forum</a></p>
+            <p>Double tap an image to quckily copy the url, single tap to view the details and edit.</p>
+            <p>The username you used to signup can also be accessed via our Chrome and Safari extensions. Your library lives in the cloud meaning you can access all of your gifs anywhere at any time!</p>
+            <p>Happy Giffing!</p>
             <p><button title='x' id='close_button'>close</button></p>
         </div>
         <div id='modal'></div>
@@ -82,9 +64,9 @@
             <div class='item' id='settings'>
                 <span class='icon'>#</span> Settings
             </div>
-            <a class='item' id='upload' href='http://imgur.com' target='_blank'>
+            <div class='item' id='upload'>
                 <span class='icon'>-</span> Upload
-            </a>
+            </div>
             <div class='item' id='about'>
                 <span class='icon'>(</span> About
             </div>

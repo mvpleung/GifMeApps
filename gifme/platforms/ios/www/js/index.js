@@ -18,7 +18,8 @@
  */
 
 window._gifme = new Application();
-var templates = ['thumb', 'signup_signin', 'tag_page', 'settings', 'info', 'upload'];
+var templates = ['thumb', 'signup_signin', 'tag_page', 'settings', 'info', 'upload'],
+    gaPlugin;
 
 var app = {
     // Application Constructor
@@ -31,10 +32,9 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        if(navigator.userAgent.toLowerCase().match(/iphone/i)){
+        if (navigator.userAgent.toLowerCase().match(/iphone/i)) {
             document.addEventListener('deviceready', this.onDeviceReady, false);
-        }
-        else {
+        } else {
             app.onDeviceReady();
         }
     },
@@ -43,6 +43,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+
         if (localStorage.getItem('uuid')) {
             _gifme.user = localStorage.getItem('uuid')
         }

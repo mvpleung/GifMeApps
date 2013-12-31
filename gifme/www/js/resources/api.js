@@ -38,15 +38,17 @@
 				success: function(data) {
 					callback(data);
 					$("#modal").fadeOut();
-					_gaq.push(['_trackEvent', 'request_success', 'clicked']);
+					// gaPlugin.trackEvent(null, null, "API", "Success", "Success", 1);
+
 				},
 				error: function() {
-					_gaq.push(['_trackEvent', 'request_fail', 'clicked']);
+					// gaPlugin.trackEvent(null, null, "API", "Fail", "Fail", 1);
+
 					$("#modal").fadeOut();
 				}
 			});
 
-			_gaq.push(['_trackEvent', 'send_request', 'clicked']);
+
 		}
 
 		/////////////////////////////////////////
@@ -67,7 +69,6 @@
 				error: function() {}
 			});
 
-			_gaq.push(['_trackEvent', 'silent', 'clicked']);
 		}
 
 		/////////////////////////////////////////
