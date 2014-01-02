@@ -91,7 +91,8 @@ h1, .stat {
   background-color: white;
   border-bottom: 1px solid #d82153;
   position: relative;
-  margin-top: 25px; }
+  margin-top: 25px;
+  z-index: 10; }
   .default header #logo {
     position: absolute;
     left: 0px;

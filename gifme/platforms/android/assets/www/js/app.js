@@ -58,12 +58,12 @@
 					}, 1500)
 				});
 
-				if (localStorage.getItem('v') != "0.0.8") {
+				if (localStorage.getItem('v') != "0.1.0") {
 					$("#overlay_update").show();
 					$("#close_button").click(function() {
 						$("#overlay_update").remove();
 					});
-					localStorage.setItem('v', '0.0.8');
+					localStorage.setItem('v', '0.1.0');
 				} else {
 					$("#overlay_update").remove();
 				}
@@ -114,25 +114,11 @@
 				});
 
 
-				$('.box').doubletap(
-					/** doubletap-dblclick callback */
-					function(el) {
-						var text = $(el).data('url');
-
-						cordova.plugins.clipboard.copy(text);
-						$("#modal").html("Copied!");
-						$("#modal").show();
-
-						setTimeout(function() {
-							$("#modal").fadeOut();
-						}, 500);
-
-					},
-					/** touch-click callback (touch) */
-					function(el) {
-						var gif = $(el).attr('id');
+				if ($("body").hasClass('android')) {
+					$(".box").click(function() {
+						var gif = $(this).attr('id');
 						var tag = "";
-						var link = $(el).data('url');
+						var link = $(this).data('url');
 
 						self.api.get("/gif/" + gif + "/details", function(data) {
 							var detail = self.templates.tag_page(data);
@@ -140,9 +126,38 @@
 
 							var tagPage = new tag_page(data);
 						});
-					},
-					400
-				);
+					})
+				} else {
+					$('.box').doubletap(
+						/** doubletap-dblclick callback */
+						function(el) {
+							var text = $(el).data('url');
+
+							cordova.plugins.clipboard.copy(text);
+							$("#modal").html("Copied!");
+							$("#modal").show();
+
+							setTimeout(function() {
+								$("#modal").fadeOut();
+							}, 500);
+
+						},
+						/** touch-click callback (touch) */
+						function(el) {
+							var gif = $(el).attr('id');
+							var tag = "";
+							var link = $(el).data('url');
+
+							self.api.get("/gif/" + gif + "/details", function(data) {
+								var detail = self.templates.tag_page(data);
+								$("body").prepend(detail);
+
+								var tagPage = new tag_page(data);
+							});
+						},
+						400
+					);
+				}
 
 				$("#content").append("<div class='clear' id='page_" + pageID + "' data-active='false' data-page='" + self.page + "'></div>");
 

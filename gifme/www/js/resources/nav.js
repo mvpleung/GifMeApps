@@ -60,15 +60,29 @@
 			});
 
 			// SEARCH
-			self.search_box.bind('touchend', function() {
-				self.search_box.width('205px');
-				$("#search").val('');
 
-				setTimeout(function() {
-					self.search.fadeIn(250);
-					self.search.focus();
-				}, 250)
-			});
+
+			if ($("body").hasClass('android')) {
+				self.search_box.bind('click', function() {
+					self.search_box.width('205px');
+					$("#search").val('');
+
+					setTimeout(function() {
+						self.search.fadeIn(250);
+						self.search.focus();
+					}, 250)
+				});
+			} else {
+				self.search_box.bind('touchend', function() {
+					self.search_box.width('205px');
+					$("#search").val('');
+
+					setTimeout(function() {
+						self.search.fadeIn(250);
+						self.search.focus();
+					}, 250)
+				});
+			}
 
 			self.search.blur(function() {
 				self.search.fadeOut(150);
@@ -134,7 +148,7 @@
 					$("#upload_url").focus(function(event) {
 						event.preventDefault();
 						$(this).blur();
-						
+
 						cordova.plugins.clipboard.paste(function(text) {
 							$("#upload_url").val(text);
 							// alert(text)
