@@ -28,25 +28,37 @@
 		//
 		/////////////////////////////////////////
 		self.get = function(request, callback) {
-			$("#modal").html("<b>loading<b><br/><span class='icon'>$</span>");
-			$("#modal").show();
-			var callback = callback;
+			
+			if (navigator.network.connection.type == Connection.NONE) {
+				navigator.notification.alert(
+					"Sorry you need a network connection to user GifMe!",
+					function() {
 
-			$.ajax({
-				url: url + request,
-				type: "GET",
-				success: function(data) {
-					callback(data);
-					$("#modal").fadeOut();
-					// gaPlugin.trackEvent(null, null, "API", "Success", "Success", 1);
+					},
+					"GifMe",
+					"Okay"
+				)
+			} else {
+				$("#modal").html("<b>loading<b><br/><span class='icon'>$</span>");
+				$("#modal").show();
+				var callback = callback;
 
-				},
-				error: function() {
-					// gaPlugin.trackEvent(null, null, "API", "Fail", "Fail", 1);
+				$.ajax({
+					url: url + request,
+					type: "GET",
+					success: function(data) {
+						callback(data);
+						$("#modal").fadeOut();
+						// gaPlugin.trackEvent(null, null, "API", "Success", "Success", 1);
 
-					$("#modal").fadeOut();
-				}
-			});
+					},
+					error: function() {
+						// gaPlugin.trackEvent(null, null, "API", "Fail", "Fail", 1);
+
+						$("#modal").fadeOut();
+					}
+				});
+			}
 
 
 		}

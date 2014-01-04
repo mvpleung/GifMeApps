@@ -32,6 +32,8 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+
+
         if (navigator.userAgent.toLowerCase().match(/iphone/i)) {
             document.addEventListener('deviceready', this.onDeviceReady, false);
         } else {
@@ -44,10 +46,21 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 
-        if (localStorage.getItem('uuid')) {
-            _gifme.user = localStorage.getItem('uuid')
+        if (navigator.network.connection.type == Connection.NONE) {
+            navigator.notification.alert(
+                "Sorry you need a network connection to user GifMe!",
+                function() {
+
+                },
+                "GifMe",
+                "Okay"
+            )
+        } else {
+            if (localStorage.getItem('uuid')) {
+                _gifme.user = localStorage.getItem('uuid')
+            }
+            _gifme.init()
         }
-        _gifme.init()
 
     }
 };
