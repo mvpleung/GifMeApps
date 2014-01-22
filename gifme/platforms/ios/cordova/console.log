@@ -1179,3 +1179,12 @@ Dec 29 09:28:56 Drews-MacBook-Pro.local GifMe[81547] <Error>: CGContextSetBlendM
 2014-01-03 08:21:09.992 GifMe[90340:80b] Unlimited access to network resources
 2014-01-03 08:21:10.103 GifMe[90340:80b] Resetting plugins due to page load.
 2014-01-03 08:21:10.201 GifMe[90340:80b] Finished load of: file:///Users/Drew/Library/Application%20Support/iPhone%20Simulator/7.0.3-64/Applications/E4042097-CC54-43ED-BD29-BA2BDFA18157/GifMe.app/www/index.html
+2014-01-12 09:42:49.643 GifMe[87971:80b] Multi-tasking -> Device: YES, App: YES
+2014-01-12 09:42:49.669 GifMe[87971:80b] Unlimited access to network resources
+2014-01-12 09:42:50.074 GifMe[87971:80b] Resetting plugins due to page load.
+2014-01-12 09:42:50.298 GifMe[87971:80b] Finished load of: file:///Users/Drew/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/BFF6C82D-E8E7-4811-A2EC-5D64251821A8/GifMe.app/www/index.html
+2014-01-12 09:42:58.368 GifMe[87971:80b] Received memory warning.
+2014-01-12 09:43:14.841 GifMe[88529:80b] Multi-tasking -> Device: YES, App: YES
+2014-01-12 09:43:14.849 GifMe[88529:80b] Unlimited access to network resources
+2014-01-12 09:43:14.983 GifMe[88529:80b] Resetting plugins due to page load.
+2014-01-12 09:43:15.177 GifMe[88529:80b] Finished load of: file:///Users/Drew/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/BFF6C82D-E8E7-4811-A2EC-5D64251821A8/GifMe.app/www/index.html

@@ -90,7 +90,7 @@
 					self.search_box.width('37px');
 
 					if (!$("body").hasClass('android')) {
-						$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
+						//$("#wrapper").height(window.innerHeight - ($('header').height() + parseFloat($('header').css('margin-top'))));
 					}
 				}, 250);
 
@@ -137,7 +137,15 @@
 			});
 
 			self.about.bind('touchend', function() {
-				_gifme.set_view(_gifme.templates.info, null, function() {
+				var store = "";
+				if(!navigator.userAgent.toLowerCase().match(/android/i)){
+					store = "https://itunes.apple.com/us/app/gifme/id791178408?ls=1&mt=8";
+				}
+				else {
+					store = "https://play.google.com/store/apps/details?id=io.gifme.gifme&hl=en";
+				}
+				
+				_gifme.set_view(_gifme.templates.info, {app_store: store}, function() {
 
 				});
 			});
@@ -161,7 +169,6 @@
 						url = url.replace("https://", "");
 
 						var u = localStorage.getItem('uuid');
-
 						if (url != "") {
 							if (url.indexOf('.gif') > 0 || url.indexOf('.jpg') > 0 || url.indexOf('.GIF') > 0) {
 								$("#modal").html("<b>uploading...<b><br/><span class='icon'>$</span>");
@@ -180,6 +187,13 @@
 										console.log(w, t, f);
 									}
 								});
+							}else{
+								navigator.notification.alert(
+									"Your URL needs to be the direct file for an image.",
+									function(){},
+									"Fiddle Sticks!",
+									"Okay"
+								)
 							}
 						}
 					});

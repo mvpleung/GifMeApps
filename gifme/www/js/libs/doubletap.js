@@ -12,7 +12,7 @@
     // Determine if we on iPhone or iPad
     var isiOS = false;
     var agent = navigator.userAgent.toLowerCase();
-    if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0) {
+    if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0 || agent.indexOf('android') >= 0) {
         isiOS = true;
     }
 
@@ -20,14 +20,17 @@
         var eventName, action;
         delay = delay == null ? 500 : delay;
         eventName = isiOS == true ? 'touchend' : 'click';
-        var el, moving = false,moveTimeout;
+        var el, moving = false,
+            moveTimeout;
 
         $(this).bind('touchmove', function() {
             moving = true;
             clearTimeout(moveTimeout);
-            moteTimeout = setTimeout(function(){
+            clearTimeout(action);
+
+            moteTimeout = setTimeout(function() {
                 moving = false;
-            },1000);
+            }, delay);
         });
 
         $(this).bind(eventName, function(event) {

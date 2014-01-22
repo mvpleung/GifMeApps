@@ -1,3 +1,3 @@
-# view AndroidManifest.xml #generated:6
+# view AndroidManifest.xml #generated:8
 -keep class io.gifme.gifme.GifMe { <init>(...); }
 

@@ -64,9 +64,11 @@
 			);
 
 			if (window.innerHeight <= 480 || navigator.userAgent.toLowerCase().match(/android/i)) {
-				$(".gif_holder").height(210)
+				$(".gif_holder").css({
+					"height": "210px"
+				})
 			}
-			
+
 			$(".gif_holder").imgur({
 				img: self.data.gif.link
 			}, function(el, data) {
@@ -136,18 +138,27 @@
 			})
 
 			$("#delete").bind('touchend', function() {
-				$("#" + self.data.gif.id).remove();
-				_gifme.api.get("/gif/" + self.data.gif.id + "/delete", function(data) {
-					$("#tag_edit").fadeOut(function() {
-						$(this).remove();
-						self.direction = null;
-						$("#wrapper").css({
-							'opacity': 1,
-							'webkit-transform': 'scale(1)'
-						})
-					});
-					$("#modal").fadeOut();
-				});
+				navigator.notification.confirm(
+					'Are you sure you want to deleve this image?',
+					function(b) {
+						if (b == 1) {
+							$("#" + self.data.gif.id).remove();
+							_gifme.api.get("/gif/" + self.data.gif.id + "/delete", function(data) {
+								$("#tag_edit").fadeOut(function() {
+									$(this).remove();
+									self.direction = null;
+									$("#wrapper").css({
+										'opacity': 1,
+										'webkit-transform': 'scale(1)'
+									})
+								});
+								$("#modal").fadeOut();
+							});
+						}
+					},
+					'Delete Image?',
+					'Yes,No'
+				)
 
 			});
 

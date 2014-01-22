@@ -34,7 +34,7 @@ var app = {
     bindEvents: function() {
 
 
-        if (navigator.userAgent.toLowerCase().match(/iphone/i)) {
+        if (navigator.userAgent.toLowerCase().match(/iphone/i) || navigator.userAgent.toLowerCase().match(/android/i)) {
             document.addEventListener('deviceready', this.onDeviceReady, false);
         } else {
             app.onDeviceReady();

@@ -42,6 +42,7 @@
 					'margin-top': '0px'
 				})
 				$("body").addClass('android');
+				document.addEventListener("backbutton", self.onBackKeyDown, false);
 			}
 			if (self.user) {
 				self.content.css({
@@ -58,12 +59,12 @@
 					}, 1500)
 				});
 
-				if (localStorage.getItem('v') != "0.1.0") {
+				if (localStorage.getItem('v') != "0.1.2") {
 					$("#overlay_update").show();
 					$("#close_button").click(function() {
 						$("#overlay_update").remove();
 					});
-					localStorage.setItem('v', '0.1.0');
+					localStorage.setItem('v', '0.1.2');
 				} else {
 					$("#overlay_update").remove();
 				}
@@ -73,6 +74,14 @@
 					self.signup_signin.init();
 				});
 			}
+		}
+
+		self.onBackKeyDown = function() {
+			console.log($("#tag_edit").length)
+			if ($("#tag_edit").length > 0) {
+				$("#cancel").trigger('touchend')
+			}
+
 		}
 
 		self.set_view = function(view, data, callback) {
@@ -113,12 +122,27 @@
 					i = i + 50;
 				});
 
+				$('.box').unbind('touchend');
 
-				if ($("body").hasClass('android')) {
-					$(".box").click(function() {
-						var gif = $(this).attr('id');
+				$('.box').doubletap(
+					/** doubletap-dblclick callback */
+					function(el) {
+						var text = $(el).data('url');
+
+						cordova.plugins.clipboard.copy(text);
+						$("#modal").html("Copied!");
+						$("#modal").show();
+
+						setTimeout(function() {
+							$("#modal").fadeOut();
+						}, 500);
+
+					},
+					/** touch-click callback (touch) */
+					function(el) {
+						var gif = $(el).attr('id');
 						var tag = "";
-						var link = $(this).data('url');
+						var link = $(el).data('url');
 
 						self.api.get("/gif/" + gif + "/details", function(data) {
 							var detail = self.templates.tag_page(data);
@@ -126,38 +150,9 @@
 
 							var tagPage = new tag_page(data);
 						});
-					})
-				} else {
-					$('.box').doubletap(
-						/** doubletap-dblclick callback */
-						function(el) {
-							var text = $(el).data('url');
-
-							cordova.plugins.clipboard.copy(text);
-							$("#modal").html("Copied!");
-							$("#modal").show();
-
-							setTimeout(function() {
-								$("#modal").fadeOut();
-							}, 500);
-
-						},
-						/** touch-click callback (touch) */
-						function(el) {
-							var gif = $(el).attr('id');
-							var tag = "";
-							var link = $(el).data('url');
-
-							self.api.get("/gif/" + gif + "/details", function(data) {
-								var detail = self.templates.tag_page(data);
-								$("body").prepend(detail);
-
-								var tagPage = new tag_page(data);
-							});
-						},
-						400
-					);
-				}
+					},
+					800
+				);
 
 				$("#content").append("<div class='clear' id='page_" + pageID + "' data-active='false' data-page='" + self.page + "'></div>");
 
