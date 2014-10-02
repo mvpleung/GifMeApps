@@ -65,7 +65,10 @@
 
 			if (window.innerHeight <= 480 || navigator.userAgent.toLowerCase().match(/android/i)) {
 				$(".gif_holder").css({
-					"height": "210px"
+					"height": "212px"
+				})
+				$("#tag_edit").css({
+					'padding-top':'0px'
 				})
 			}
 
@@ -77,6 +80,34 @@
 					'backgroundSize': 'cover',
 					'backgroundPosition': 'center'
 				});
+			});
+
+			$("#view_full").bind('touchend',function(){
+				var img = new Image();
+				$("#modal").html("<b>loading<b><br/><span class='icon'>$</span>");
+
+				$("#modal").fadeIn();
+				img.onload = function(event){
+					console.log(this.height,this.width,event.target.height,event.target.src);
+
+					var rotate = _gifme.templates.rotate({ image: event.target.src  });
+					$("body").append(rotate);
+					if(this.height > this.width){
+						$("#rotate").addClass('portrait');
+					}
+					else{
+						$("#rotate").addClass('landscape');
+					}
+
+					$("#rotate").bind('touchend',function(){
+						$("#rotate").remove();
+						$("#rotate").unbind('touchend')
+					})
+
+					$("#modal").fadeOut();
+				}
+				img.src = self.data.gif.link
+				
 			});
 
 			$("#cancel").bind('touchend', function() {

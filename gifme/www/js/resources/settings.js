@@ -45,30 +45,6 @@
 
 				});
 
-				// Shrink
-				// $("#shrink").change(function() {
-				// 	if (this.checked) {
-				// 		window.localStorage.setItem('url_shrink', "true");
-				// 	} else {
-				// 		window.localStorage.setItem('url_shrink', "false");
-				// 	}
-				// });
-
-				// if (self.shrink() == "true") {
-				// 	$("#shrink").prop('checked', true);
-				// } else {
-				// 	$("#shrink").prop('checked', false);
-				// }
-
-				// chrome.storage.sync.get('auto_tag', function(data) {
-				// 	console.log(data)
-				// 	if (data.auto_tag == true) {
-				// 		$("#auto_tag").prop('checked', true);
-				// 	} else {
-				// 		$("#auto_tag").prop('checked', false);
-				// 	}
-				// });
-
 			});
 
 		}

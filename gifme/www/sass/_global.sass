@@ -46,6 +46,40 @@ h1,.stat
 	#options
 		margin:
 			top: 25px
+
+#rotate
+	width: 100%
+	height: 100%
+	background:
+		color: #fff
+		size: contain
+		repeat: no-repeat
+	position: fixed
+	z-index: 200000
+	top: 0px
+	left: 0px
+	text-align: center
+
+	img
+		height: auto
+		width: 100%
+
+
+#rotate.landscape
+	height: 200%
+	width: 200%
+	background:
+		size: 50%
+		position: 50%
+	top: -50%
+	left: -50%
+	-webkit-transform: rotate(90deg)
+
+#rotate.portrait
+	background:
+		size: 90%
+		position: 50%
+
 .default
 
 	header
@@ -404,7 +438,7 @@ a
 
 	.gif_holder
 		width: 100%
-		height: 297px
+		height: 283px
 		background:
 			size: cover
 			position: center
@@ -609,4 +643,4 @@ a
 			top: 0px !important
 		box-shadow: none !important
 	.gif_holder
-		height: 220px !important
+		height: 204px !important

@@ -37,7 +37,7 @@
 			//	Start Things Off
 			//
 			/////////////////////////////////////////
-			if (navigator.userAgent.toLowerCase().match(/android/i)) {
+			if (navigator.userAgent.toLowerCase().match(/android/i) || window.innerHeight <= 480 && !navigator.userAgent.toLowerCase().match(/os 7/i)) {
 				$("header").css({
 					'margin-top': '0px'
 				})
@@ -59,12 +59,12 @@
 					}, 1500)
 				});
 
-				if (localStorage.getItem('v') != "0.1.2") {
+				if (localStorage.getItem('v') != "0.1.3") {
 					$("#overlay_update").show();
 					$("#close_button").click(function() {
 						$("#overlay_update").remove();
 					});
-					localStorage.setItem('v', '0.1.2');
+					localStorage.setItem('v', '0.1.3');
 				} else {
 					$("#overlay_update").remove();
 				}

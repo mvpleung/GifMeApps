@@ -18,7 +18,7 @@
  */
 
 window._gifme = new Application();
-var templates = ['thumb', 'signup_signin', 'tag_page', 'settings', 'info', 'upload'],
+var templates = ['thumb', 'signup_signin', 'tag_page', 'settings', 'info', 'upload','rotate'],
     gaPlugin;
 
 var app = {
