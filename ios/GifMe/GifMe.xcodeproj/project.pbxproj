@@ -13,6 +13,8 @@
 		3AB1272019DE123D00914CF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB1271F19DE123D00914CF5 /* Images.xcassets */; };
 		3AB1272319DE123D00914CF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB1272119DE123D00914CF5 /* LaunchScreen.xib */; };
 		3AB1272F19DE123D00914CF5 /* GifMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB1272E19DE123D00914CF5 /* GifMeTests.swift */; };
+		3AB1273919DE1E4700914CF5 /* type.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB1273819DE1E4700914CF5 /* type.png */; };
+		3AB1273F19DE222500914CF5 /* SetupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB1273E19DE222500914CF5 /* SetupView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		3AB1272819DE123D00914CF5 /* GifMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB1272D19DE123D00914CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AB1272E19DE123D00914CF5 /* GifMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifMeTests.swift; sourceTree = "<group>"; };
+		3AB1273819DE1E4700914CF5 /* type.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type.png; sourceTree = "<group>"; };
+		3AB1273E19DE222500914CF5 /* SetupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,10 @@
 				3AB1271819DE123D00914CF5 /* AppDelegate.swift */,
 				3AB1271A19DE123D00914CF5 /* ViewController.swift */,
 				3AB1271C19DE123D00914CF5 /* Main.storyboard */,
+				3AB1273819DE1E4700914CF5 /* type.png */,
 				3AB1271F19DE123D00914CF5 /* Images.xcassets */,
 				3AB1272119DE123D00914CF5 /* LaunchScreen.xib */,
+				3AB1273E19DE222500914CF5 /* SetupView.xib */,
 				3AB1271619DE123D00914CF5 /* Supporting Files */,
 			);
 			path = GifMe;
@@ -192,7 +198,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB1273F19DE222500914CF5 /* SetupView.xib in Resources */,
 				3AB1271E19DE123D00914CF5 /* Main.storyboard in Resources */,
+				3AB1273919DE1E4700914CF5 /* type.png in Resources */,
 				3AB1272319DE123D00914CF5 /* LaunchScreen.xib in Resources */,
 				3AB1272019DE123D00914CF5 /* Images.xcassets in Resources */,
 			);
@@ -339,8 +347,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GifMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,8 +359,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GifMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
