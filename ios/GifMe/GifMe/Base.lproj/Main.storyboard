@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GifMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,124 +15,11 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbt-Bw-JOa">
-                                <rect key="frame" x="261" y="240" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ3-cU-OVq">
-                                <rect key="frame" x="240" y="316" width="121" height="30"/>
-                                <color key="backgroundColor" red="0.83921568629999999" green="0.0" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="uFU-2l-JY2" kind="popoverPresentation" popoverAnchorView="lQ3-cU-OVq" id="5zy-nO-bvQ">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="cbt-Bw-JOa" secondAttribute="centerY" constant="50" id="PTy-Tn-IhU"/>
-                            <constraint firstAttribute="centerX" secondItem="cbt-Bw-JOa" secondAttribute="centerX" id="dBx-ln-Toj"/>
-                            <constraint firstAttribute="centerY" secondItem="lQ3-cU-OVq" secondAttribute="centerY" id="jgY-LA-j1z"/>
-                            <constraint firstAttribute="centerX" secondItem="lQ3-cU-OVq" secondAttribute="centerX" id="tVs-Ok-pvL"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="522"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="IVc-SV-wLS">
-            <objects>
-                <viewController id="uFU-2l-JY2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PVL-p1-txk"/>
-                        <viewControllerLayoutGuide type="bottom" id="7Mn-h4-vJC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="j9Y-mj-YoU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="whoa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iro-Nd-tRV">
-                                <rect key="frame" x="296" y="138" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="177" y="185" width="42" height="21"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzT-ei-4I3">
-                                <rect key="frame" x="296" y="267" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="177" y="332" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="VgJ-xR-1pY"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75N-jJ-GuD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Wuuuut" id="VJa-M4-LYl"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
-                                </variation>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="LzT-ei-4I3" secondAttribute="centerX" id="62m-Hh-4ML"/>
-                            <constraint firstAttribute="centerX" secondItem="Iro-Nd-tRV" secondAttribute="centerX" id="eJB-Eq-ri9"/>
-                            <constraint firstAttribute="centerY" secondItem="Iro-Nd-tRV" secondAttribute="centerY" constant="50" id="hwK-Vf-i9C"/>
-                            <constraint firstAttribute="centerY" secondItem="LzT-ei-4I3" secondAttribute="centerY" id="mWO-TU-Dia"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="75N-jJ-GuD"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="eJB-Eq-ri9"/>
-                                <exclude reference="hwK-Vf-i9C"/>
-                                <exclude reference="62m-Hh-4ML"/>
-                                <exclude reference="mWO-TU-Dia"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="75N-jJ-GuD"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="eJB-Eq-ri9"/>
-                                <include reference="hwK-Vf-i9C"/>
-                                <include reference="62m-Hh-4ML"/>
-                                <include reference="mWO-TU-Dia"/>
-                            </mask>
-                        </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="ej5-Ge-iz3" appends="YES" id="5Do-Al-DrC"/>
-                        </connections>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3vt-5B-LhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ej5-Ge-iz3">
-                    <rectEdge key="edges" left="YES"/>
-                </screenEdgePanGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="1289" y="522"/>
         </scene>
     </scenes>
 </document>
