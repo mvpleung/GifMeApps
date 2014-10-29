@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3AB1280B19DE3AF200914CF5"
+               BlueprintIdentifier = "3A75043A19DEF30F003093BE"
                BuildableName = "GifMe.app"
                BlueprintName = "GifMe"
                ReferencedContainer = "container:GifMe.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3AB1282019DE3AF200914CF5"
+               BlueprintIdentifier = "3A75044F19DEF30F003093BE"
                BuildableName = "GifMeTests.xctest"
                BlueprintName = "GifMeTests"
                ReferencedContainer = "container:GifMe.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3AB1282019DE3AF200914CF5"
+               BlueprintIdentifier = "3A75044F19DEF30F003093BE"
                BuildableName = "GifMeTests.xctest"
                BlueprintName = "GifMeTests"
                ReferencedContainer = "container:GifMe.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3AB1280B19DE3AF200914CF5"
+            BlueprintIdentifier = "3A75043A19DEF30F003093BE"
             BuildableName = "GifMe.app"
             BlueprintName = "GifMe"
             ReferencedContainer = "container:GifMe.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3AB1280B19DE3AF200914CF5"
+            BlueprintIdentifier = "3A75043A19DEF30F003093BE"
             BuildableName = "GifMe.app"
             BlueprintName = "GifMe"
             ReferencedContainer = "container:GifMe.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3AB1280B19DE3AF200914CF5"
+            BlueprintIdentifier = "3A75043A19DEF30F003093BE"
             BuildableName = "GifMe.app"
             BlueprintName = "GifMe"
             ReferencedContainer = "container:GifMe.xcodeproj">

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  GifMe
 //
-//  Created by Drew Dahlman on 10/2/14.
+//  Created by Drew Dahlman on 10/3/14.
 //  Copyright (c) 2014 GifMe. All rights reserved.
 //
 

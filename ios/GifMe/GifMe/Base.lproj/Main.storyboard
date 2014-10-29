@@ -1,26 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GifMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GifMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="mPq-Uo-R4Y" kind="show" identifier="intro_to_setup" id="J2e-RO-VjF"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="394.5" y="522"/>
+        </scene>
+        <!--Setup View Controller-->
+        <scene sceneID="SUR-pk-KN1">
+            <objects>
+                <viewController storyboardIdentifier="Setup View Controller" title="Setup View Controller" id="mPq-Uo-R4Y" customClass="SetupViewController" customModule="GifMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="czV-hV-dpW"/>
+                        <viewControllerLayoutGuide type="bottom" id="piY-P0-rBN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8sd-dW-y33">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qmv-td-COa"/>
+                    <connections>
+                        <segue destination="tKC-nB-x5T" kind="presentation" identifier="setup_to_signin" modalTransitionStyle="coverVertical" id="0EL-IQ-CiR"/>
+                        <segue destination="1pa-Rb-33k" kind="presentation" identifier="setup_to_signup" modalTransitionStyle="coverVertical" id="efu-xg-Tld"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRJ-tk-0Bt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="109"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="QkR-fQ-Pg7">
+            <objects>
+                <viewController storyboardIdentifier="Sign Up View Controller" title="Sign Up View Controller" id="1pa-Rb-33k" customClass="SignUpViewController" customModule="GifMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dbR-n5-Tte"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q6z-ff-LIG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yQA-QC-EfE">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="mPq-Uo-R4Y" kind="presentation" identifier="signup_to_setup" modalTransitionStyle="coverVertical" id="yxk-Up-OFp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHD-UT-xGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="-185"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="HEj-sW-Iec">
+            <objects>
+                <viewController storyboardIdentifier="Sign In View Controller" title="Sign In View Controller" id="tKC-nB-x5T" customClass="SignInViewController" customModule="GifMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Vu-AV-bE7"/>
+                        <viewControllerLayoutGuide type="bottom" id="BRi-gI-VkN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ABN-bH-9Ih">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="mPq-Uo-R4Y" kind="presentation" identifier="signin_to_setup" modalTransitionStyle="coverVertical" id="YRa-13-KR5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0To-lB-Dep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="523"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YRa-13-KR5"/>
+    </inferredMetricsTieBreakers>
 </document>

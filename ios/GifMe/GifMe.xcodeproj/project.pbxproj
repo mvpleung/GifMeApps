@@ -7,46 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AB1281219DE3AF200914CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB1281119DE3AF200914CF5 /* AppDelegate.swift */; };
-		3AB1281419DE3AF200914CF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB1281319DE3AF200914CF5 /* ViewController.swift */; };
-		3AB1281719DE3AF200914CF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB1281519DE3AF200914CF5 /* Main.storyboard */; };
-		3AB1281919DE3AF200914CF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB1281819DE3AF200914CF5 /* Images.xcassets */; };
-		3AB1281C19DE3AF200914CF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB1281A19DE3AF200914CF5 /* LaunchScreen.xib */; };
-		3AB1282819DE3AF200914CF5 /* GifMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB1282719DE3AF200914CF5 /* GifMeTests.swift */; };
+		3A75044119DEF30F003093BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75044019DEF30F003093BE /* AppDelegate.swift */; };
+		3A75044319DEF30F003093BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75044219DEF30F003093BE /* ViewController.swift */; };
+		3A75044619DEF30F003093BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A75044419DEF30F003093BE /* Main.storyboard */; };
+		3A75044819DEF30F003093BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A75044719DEF30F003093BE /* Images.xcassets */; };
+		3A75044B19DEF30F003093BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A75044919DEF30F003093BE /* LaunchScreen.xib */; };
+		3A75045719DEF30F003093BE /* GifMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75045619DEF30F003093BE /* GifMeTests.swift */; };
+		3A75046919DF0427003093BE /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75046819DF0427003093BE /* SetupViewController.swift */; };
+		3A75047019DF0BD3003093BE /* proxima_nova_bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A75046D19DF0BD3003093BE /* proxima_nova_bold-webfont.ttf */; };
+		3A75047119DF0BD3003093BE /* proxima_nova_light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A75046E19DF0BD3003093BE /* proxima_nova_light-webfont.ttf */; };
+		3A75047219DF0BD3003093BE /* proximanovacond-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A75046F19DF0BD3003093BE /* proximanovacond-regular-webfont.ttf */; };
+		3A75047419DF146E003093BE /* UIColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75047319DF146E003093BE /* UIColorHelper.swift */; };
+		3A75047619DF2F32003093BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75047519DF2F32003093BE /* SignUpViewController.swift */; };
+		3A75047A19DF3F53003093BE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75047919DF3F53003093BE /* SignInViewController.swift */; };
+		3A75047C19E070BD003093BE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A75047B19E070BD003093BE /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3AB1282219DE3AF200914CF5 /* PBXContainerItemProxy */ = {
+		3A75045119DEF30F003093BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3AB1280419DE3AF200914CF5 /* Project object */;
+			containerPortal = 3A75043319DEF30F003093BE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3AB1280B19DE3AF200914CF5;
+			remoteGlobalIDString = 3A75043A19DEF30F003093BE;
 			remoteInfo = GifMe;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3AB1280C19DE3AF200914CF5 /* GifMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AB1281019DE3AF200914CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AB1281119DE3AF200914CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3AB1281319DE3AF200914CF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3AB1281619DE3AF200914CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3AB1281819DE3AF200914CF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3AB1281B19DE3AF200914CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3AB1282119DE3AF200914CF5 /* GifMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AB1282619DE3AF200914CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AB1282719DE3AF200914CF5 /* GifMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifMeTests.swift; sourceTree = "<group>"; };
+		3A75043B19DEF30F003093BE /* GifMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A75043F19DEF30F003093BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A75044019DEF30F003093BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A75044219DEF30F003093BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A75044519DEF30F003093BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A75044719DEF30F003093BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3A75044A19DEF30F003093BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3A75045019DEF30F003093BE /* GifMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A75045519DEF30F003093BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A75045619DEF30F003093BE /* GifMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifMeTests.swift; sourceTree = "<group>"; };
+		3A75046819DF0427003093BE /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		3A75046D19DF0BD3003093BE /* proxima_nova_bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima_nova_bold-webfont.ttf"; path = "../proxima_nova_bold-webfont.ttf"; sourceTree = "<group>"; };
+		3A75046E19DF0BD3003093BE /* proxima_nova_light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proxima_nova_light-webfont.ttf"; path = "../proxima_nova_light-webfont.ttf"; sourceTree = "<group>"; };
+		3A75046F19DF0BD3003093BE /* proximanovacond-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanovacond-regular-webfont.ttf"; path = "../proximanovacond-regular-webfont.ttf"; sourceTree = "<group>"; };
+		3A75047319DF146E003093BE /* UIColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorHelper.swift; sourceTree = "<group>"; };
+		3A75047519DF2F32003093BE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3A75047919DF3F53003093BE /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3A75047B19E070BD003093BE /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3AB1280919DE3AF200914CF5 /* Frameworks */ = {
+		3A75043819DEF30F003093BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3AB1281E19DE3AF200914CF5 /* Frameworks */ = {
+		3A75044D19DEF30F003093BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,72 +72,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3AB1280319DE3AF200914CF5 = {
+		3A75043219DEF30F003093BE = {
 			isa = PBXGroup;
 			children = (
-				3AB1280E19DE3AF200914CF5 /* GifMe */,
-				3AB1282419DE3AF200914CF5 /* GifMeTests */,
-				3AB1280D19DE3AF200914CF5 /* Products */,
+				3A75043D19DEF30F003093BE /* GifMe */,
+				3A75045319DEF30F003093BE /* GifMeTests */,
+				3A75043C19DEF30F003093BE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3AB1280D19DE3AF200914CF5 /* Products */ = {
+		3A75043C19DEF30F003093BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3AB1280C19DE3AF200914CF5 /* GifMe.app */,
-				3AB1282119DE3AF200914CF5 /* GifMeTests.xctest */,
+				3A75043B19DEF30F003093BE /* GifMe.app */,
+				3A75045019DEF30F003093BE /* GifMeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3AB1280E19DE3AF200914CF5 /* GifMe */ = {
+		3A75043D19DEF30F003093BE /* GifMe */ = {
 			isa = PBXGroup;
 			children = (
-				3AB1281119DE3AF200914CF5 /* AppDelegate.swift */,
-				3AB1281319DE3AF200914CF5 /* ViewController.swift */,
-				3AB1281519DE3AF200914CF5 /* Main.storyboard */,
-				3AB1281819DE3AF200914CF5 /* Images.xcassets */,
-				3AB1281A19DE3AF200914CF5 /* LaunchScreen.xib */,
-				3AB1280F19DE3AF200914CF5 /* Supporting Files */,
+				3A75046C19DF0B67003093BE /* fonts */,
+				3A75044019DEF30F003093BE /* AppDelegate.swift */,
+				3A75044219DEF30F003093BE /* ViewController.swift */,
+				3A75046819DF0427003093BE /* SetupViewController.swift */,
+				3A75047519DF2F32003093BE /* SignUpViewController.swift */,
+				3A75047919DF3F53003093BE /* SignInViewController.swift */,
+				3A75047B19E070BD003093BE /* API.swift */,
+				3A75047319DF146E003093BE /* UIColorHelper.swift */,
+				3A75044419DEF30F003093BE /* Main.storyboard */,
+				3A75044719DEF30F003093BE /* Images.xcassets */,
+				3A75044919DEF30F003093BE /* LaunchScreen.xib */,
+				3A75043E19DEF30F003093BE /* Supporting Files */,
 			);
 			path = GifMe;
 			sourceTree = "<group>";
 		};
-		3AB1280F19DE3AF200914CF5 /* Supporting Files */ = {
+		3A75043E19DEF30F003093BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3AB1281019DE3AF200914CF5 /* Info.plist */,
+				3A75043F19DEF30F003093BE /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3AB1282419DE3AF200914CF5 /* GifMeTests */ = {
+		3A75045319DEF30F003093BE /* GifMeTests */ = {
 			isa = PBXGroup;
 			children = (
-				3AB1282719DE3AF200914CF5 /* GifMeTests.swift */,
-				3AB1282519DE3AF200914CF5 /* Supporting Files */,
+				3A75045619DEF30F003093BE /* GifMeTests.swift */,
+				3A75045419DEF30F003093BE /* Supporting Files */,
 			);
 			path = GifMeTests;
 			sourceTree = "<group>";
 		};
-		3AB1282519DE3AF200914CF5 /* Supporting Files */ = {
+		3A75045419DEF30F003093BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3AB1282619DE3AF200914CF5 /* Info.plist */,
+				3A75045519DEF30F003093BE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A75046C19DF0B67003093BE /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3A75046D19DF0BD3003093BE /* proxima_nova_bold-webfont.ttf */,
+				3A75046E19DF0BD3003093BE /* proxima_nova_light-webfont.ttf */,
+				3A75046F19DF0BD3003093BE /* proximanovacond-regular-webfont.ttf */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3AB1280B19DE3AF200914CF5 /* GifMe */ = {
+		3A75043A19DEF30F003093BE /* GifMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3AB1282B19DE3AF200914CF5 /* Build configuration list for PBXNativeTarget "GifMe" */;
+			buildConfigurationList = 3A75045A19DEF30F003093BE /* Build configuration list for PBXNativeTarget "GifMe" */;
 			buildPhases = (
-				3AB1280819DE3AF200914CF5 /* Sources */,
-				3AB1280919DE3AF200914CF5 /* Frameworks */,
-				3AB1280A19DE3AF200914CF5 /* Resources */,
+				3A75043719DEF30F003093BE /* Sources */,
+				3A75043819DEF30F003093BE /* Frameworks */,
+				3A75043919DEF30F003093BE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -129,46 +161,46 @@
 			);
 			name = GifMe;
 			productName = GifMe;
-			productReference = 3AB1280C19DE3AF200914CF5 /* GifMe.app */;
+			productReference = 3A75043B19DEF30F003093BE /* GifMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3AB1282019DE3AF200914CF5 /* GifMeTests */ = {
+		3A75044F19DEF30F003093BE /* GifMeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3AB1282E19DE3AF200914CF5 /* Build configuration list for PBXNativeTarget "GifMeTests" */;
+			buildConfigurationList = 3A75045D19DEF30F003093BE /* Build configuration list for PBXNativeTarget "GifMeTests" */;
 			buildPhases = (
-				3AB1281D19DE3AF200914CF5 /* Sources */,
-				3AB1281E19DE3AF200914CF5 /* Frameworks */,
-				3AB1281F19DE3AF200914CF5 /* Resources */,
+				3A75044C19DEF30F003093BE /* Sources */,
+				3A75044D19DEF30F003093BE /* Frameworks */,
+				3A75044E19DEF30F003093BE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3AB1282319DE3AF200914CF5 /* PBXTargetDependency */,
+				3A75045219DEF30F003093BE /* PBXTargetDependency */,
 			);
 			name = GifMeTests;
 			productName = GifMeTests;
-			productReference = 3AB1282119DE3AF200914CF5 /* GifMeTests.xctest */;
+			productReference = 3A75045019DEF30F003093BE /* GifMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3AB1280419DE3AF200914CF5 /* Project object */ = {
+		3A75043319DEF30F003093BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = GifMe;
 				TargetAttributes = {
-					3AB1280B19DE3AF200914CF5 = {
+					3A75043A19DEF30F003093BE = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
-					3AB1282019DE3AF200914CF5 = {
+					3A75044F19DEF30F003093BE = {
 						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = 3AB1280B19DE3AF200914CF5;
+						TestTargetID = 3A75043A19DEF30F003093BE;
 					};
 				};
 			};
-			buildConfigurationList = 3AB1280719DE3AF200914CF5 /* Build configuration list for PBXProject "GifMe" */;
+			buildConfigurationList = 3A75043619DEF30F003093BE /* Build configuration list for PBXProject "GifMe" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -176,29 +208,32 @@
 				en,
 				Base,
 			);
-			mainGroup = 3AB1280319DE3AF200914CF5;
-			productRefGroup = 3AB1280D19DE3AF200914CF5 /* Products */;
+			mainGroup = 3A75043219DEF30F003093BE;
+			productRefGroup = 3A75043C19DEF30F003093BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3AB1280B19DE3AF200914CF5 /* GifMe */,
-				3AB1282019DE3AF200914CF5 /* GifMeTests */,
+				3A75043A19DEF30F003093BE /* GifMe */,
+				3A75044F19DEF30F003093BE /* GifMeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3AB1280A19DE3AF200914CF5 /* Resources */ = {
+		3A75043919DEF30F003093BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB1281719DE3AF200914CF5 /* Main.storyboard in Resources */,
-				3AB1281C19DE3AF200914CF5 /* LaunchScreen.xib in Resources */,
-				3AB1281919DE3AF200914CF5 /* Images.xcassets in Resources */,
+				3A75047019DF0BD3003093BE /* proxima_nova_bold-webfont.ttf in Resources */,
+				3A75047119DF0BD3003093BE /* proxima_nova_light-webfont.ttf in Resources */,
+				3A75047219DF0BD3003093BE /* proximanovacond-regular-webfont.ttf in Resources */,
+				3A75044619DEF30F003093BE /* Main.storyboard in Resources */,
+				3A75044B19DEF30F003093BE /* LaunchScreen.xib in Resources */,
+				3A75044819DEF30F003093BE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3AB1281F19DE3AF200914CF5 /* Resources */ = {
+		3A75044E19DEF30F003093BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,46 +243,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3AB1280819DE3AF200914CF5 /* Sources */ = {
+		3A75043719DEF30F003093BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB1281419DE3AF200914CF5 /* ViewController.swift in Sources */,
-				3AB1281219DE3AF200914CF5 /* AppDelegate.swift in Sources */,
+				3A75047619DF2F32003093BE /* SignUpViewController.swift in Sources */,
+				3A75044319DEF30F003093BE /* ViewController.swift in Sources */,
+				3A75047A19DF3F53003093BE /* SignInViewController.swift in Sources */,
+				3A75046919DF0427003093BE /* SetupViewController.swift in Sources */,
+				3A75047419DF146E003093BE /* UIColorHelper.swift in Sources */,
+				3A75044119DEF30F003093BE /* AppDelegate.swift in Sources */,
+				3A75047C19E070BD003093BE /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3AB1281D19DE3AF200914CF5 /* Sources */ = {
+		3A75044C19DEF30F003093BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB1282819DE3AF200914CF5 /* GifMeTests.swift in Sources */,
+				3A75045719DEF30F003093BE /* GifMeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3AB1282319DE3AF200914CF5 /* PBXTargetDependency */ = {
+		3A75045219DEF30F003093BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3AB1280B19DE3AF200914CF5 /* GifMe */;
-			targetProxy = 3AB1282219DE3AF200914CF5 /* PBXContainerItemProxy */;
+			target = 3A75043A19DEF30F003093BE /* GifMe */;
+			targetProxy = 3A75045119DEF30F003093BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3AB1281519DE3AF200914CF5 /* Main.storyboard */ = {
+		3A75044419DEF30F003093BE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3AB1281619DE3AF200914CF5 /* Base */,
+				3A75044519DEF30F003093BE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		3AB1281A19DE3AF200914CF5 /* LaunchScreen.xib */ = {
+		3A75044919DEF30F003093BE /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3AB1281B19DE3AF200914CF5 /* Base */,
+				3A75044A19DEF30F003093BE /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -255,7 +295,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3AB1282919DE3AF200914CF5 /* Debug */ = {
+		3A75045819DEF30F003093BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,11 +334,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3AB1282A19DE3AF200914CF5 /* Release */ = {
+		3A75045919DEF30F003093BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -329,34 +368,33 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		3AB1282C19DE3AF200914CF5 /* Debug */ = {
+		3A75045B19DEF30F003093BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GifMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		3AB1282D19DE3AF200914CF5 /* Release */ = {
+		3A75045C19DEF30F003093BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GifMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		3AB1282F19DE3AF200914CF5 /* Debug */ = {
+		3A75045E19DEF30F003093BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -375,7 +413,7 @@
 			};
 			name = Debug;
 		};
-		3AB1283019DE3AF200914CF5 /* Release */ = {
+		3A75045F19DEF30F003093BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -393,32 +431,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3AB1280719DE3AF200914CF5 /* Build configuration list for PBXProject "GifMe" */ = {
+		3A75043619DEF30F003093BE /* Build configuration list for PBXProject "GifMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3AB1282919DE3AF200914CF5 /* Debug */,
-				3AB1282A19DE3AF200914CF5 /* Release */,
+				3A75045819DEF30F003093BE /* Debug */,
+				3A75045919DEF30F003093BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3AB1282B19DE3AF200914CF5 /* Build configuration list for PBXNativeTarget "GifMe" */ = {
+		3A75045A19DEF30F003093BE /* Build configuration list for PBXNativeTarget "GifMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3AB1282C19DE3AF200914CF5 /* Debug */,
-				3AB1282D19DE3AF200914CF5 /* Release */,
+				3A75045B19DEF30F003093BE /* Debug */,
+				3A75045C19DEF30F003093BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		3AB1282E19DE3AF200914CF5 /* Build configuration list for PBXNativeTarget "GifMeTests" */ = {
+		3A75045D19DEF30F003093BE /* Build configuration list for PBXNativeTarget "GifMeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3AB1282F19DE3AF200914CF5 /* Debug */,
-				3AB1283019DE3AF200914CF5 /* Release */,
+				3A75045E19DEF30F003093BE /* Debug */,
+				3A75045F19DEF30F003093BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3AB1280419DE3AF200914CF5 /* Project object */;
+	rootObject = 3A75043319DEF30F003093BE /* Project object */;
 }
